@@ -5,7 +5,7 @@ include '../includes/db.php';
 if(isset($_POST['delete'])){
     $id = $_POST['id'] ?? null;
     if($id){
-        $sql = "DELETE FROM students WHERE id=$id";
+        $sql = "DELETE FROM students WHERE id=" . intval($id);
         if($conn->query($sql)){
             echo "<p>Record deleted!</p>";
         }
@@ -83,11 +83,18 @@ if(isset($_POST['delete'])){
             $result = $conn->query("SELECT * FROM students");
             if ($result && $result->num_rows > 0) {
                 while($row = $result->fetch_assoc()){
+                    $surname    = $row['surname'] ?? '';
+                    $name       = $row['name'] ?? '';
+                    $middlename = $row['middlename'] ?? '';
+                    $address    = $row['address'] ?? '';
+                    $contact    = $row['contact_number'] ?? '';
+                    $id         = $row['id'] ?? '';
+
                     echo "<div class='info-card'>
-                            <h2>{$row['surname']}, {$row['name']} {$row['middlename']}</h2>
-                            <p><strong>ID:</strong> {$row['id']}</p>
-                            <p><strong>Address:</strong> {$row['address']}</p>
-                            <p><strong>Contact:</strong> {$row['contact_number']}</p>
+                            <h2>{$surname}, {$name} {$middlename}</h2>
+                            <p><strong>ID:</strong> {$id}</p>
+                            <p><strong>Address:</strong> {$address}</p>
+                            <p><strong>Contact:</strong> {$contact}</p>
                           </div>";
                 }
                 echo "<p>Total Students: " . $result->num_rows . "</p>";
@@ -118,15 +125,19 @@ if(isset($_POST['delete'])){
                 $address    = $_POST['address'] ?? '';
                 $contact    = $_POST['contact_number'] ?? '';
 
-                if($id && !empty($name) && !empty($surname)){
-                    $sql = "UPDATE students 
-                            SET name='$name', surname='$surname', middlename='$middlename', address='$address', contact_number='$contact' 
-                            WHERE id=$id";
+                if($id){
+                    $sql = "UPDATE students SET 
+                            name='$name', 
+                            surname='$surname', 
+                            middlename='$middlename', 
+                            address='$address', 
+                            contact_number='$contact' 
+                            WHERE id=" . intval($id);
                     if($conn->query($sql)){
                         echo "<p>Record updated!</p>";
                     }
                 } else {
-                    echo "<p style='color:red;'>Please fill in required fields (ID, Name, Surname).</p>";
+                    echo "<p style='color:red;'>Please provide a valid Student ID.</p>";
                 }
             }
             ?>
