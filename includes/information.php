@@ -1,4 +1,4 @@
-<!-- READ -->
+
 <section id="infomation" class="content">
     <h2>All Students</h2>
     <?php

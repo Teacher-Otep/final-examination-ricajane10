@@ -1,4 +1,4 @@
-<!-- DELETE -->
+
 <section id="delete" class="content">
     <h2>Delete Student</h2>
     <form method="post" action="">

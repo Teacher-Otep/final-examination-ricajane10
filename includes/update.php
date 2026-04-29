@@ -1,4 +1,4 @@
-<!-- UPDATE -->
+
 <section id="update" class="content">
     <h2>Update Student</h2>
     <form method="post" action="">

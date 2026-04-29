@@ -1,4 +1,4 @@
-/* General body setup */
+
 body {
     font-family: 'Segoe UI', Arial, sans-serif;
     background: linear-gradient(135deg, #b171e8, #ea86a7);
@@ -7,11 +7,11 @@ body {
     color: #444;
     display: flex;
     flex-direction: column;
-    align-items: center;   /* center horizontally */
+    align-items: center;   
     min-height: 100vh;
 }
 
-/* Header */
+
 header {
     background: linear-gradient(90deg, #9f4ae4, #c14dd0);
     padding: 10px;
@@ -34,7 +34,7 @@ header img:hover {
     box-shadow: 0 0 15px rgba(255, 255, 255, 0.6);
 }
 
-/* Container */
+
 .container {
     width: 80%;
     max-width: 900px;
@@ -46,7 +46,7 @@ header img:hover {
     text-align: center;
 }
 
-/* Buttons row */
+
 button {
     background: #632444;
     border: none;
@@ -65,7 +65,7 @@ button:hover {
     box-shadow: 0 4px 8px rgba(255, 51, 133, 0.4);
 }
 
-/* Sections styled as pastel cards */
+
 .content {
     display: none;
     margin-top: 25px;
@@ -75,7 +75,7 @@ button:hover {
     animation: fadeIn 1.10s ease;
 }
 
-/* Home section */
+
 #home {
     display: block;
     text-align: center;
@@ -89,7 +89,7 @@ button:hover {
     font-display: fallback;
 }
 
-/* Create section */
+
 #create {
     background: linear-gradient(135deg, #5a85d9, #d6399f);
 }
@@ -100,7 +100,7 @@ button:hover {
     font-style: italic;
 }
 
-/* Information section */
+
 #information {
     background: linear-gradient(135deg, #5a85d9, #d6399f);
 }
@@ -111,7 +111,7 @@ button:hover {
     font-style: italic;
 }
 
-/* Update section */
+
 #update {
     background: linear-gradient(135deg, #5a85d9, #d6399f);
 }
@@ -122,7 +122,7 @@ button:hover {
     font-style: italic;
 }
 
-/* Delete section */
+
 #delete {
     background: linear-gradient(135deg, #5a85d9, #d6399f);
 }
@@ -133,7 +133,7 @@ button:hover {
     font-style: italic;
 }
 
-/* Info cards inside Information */
+
 .info-card {
     background: #fff0f5;
     border: 1px solid #f851a5;
@@ -160,7 +160,7 @@ button:hover {
     color: #282020;
 }
 
-/* Smooth fade animation */
+
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(10px); }
     to { opacity: 2; transform: translateY(0); }

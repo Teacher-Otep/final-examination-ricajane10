@@ -1,7 +1,7 @@
 <?php
 include '../includes/db.php';
 
-// DELETE logic muna para ma-update agad ang data
+
 if(isset($_POST['delete'])){
     $id = $_POST['id'] ?? null;
     if($id){
@@ -37,13 +37,13 @@ if(isset($_POST['delete'])){
         <button onclick="showSection('update')">✏️ Update</button>
         <button onclick="showSection('delete')">❌ Delete</button>
 
-        <!-- HOME -->
+        
         <section id="home" class="content" style="display:block;">
             <h2>Welcome to the Student Management System</h2>
             <p>Select an option above to<br>manage student records.</p>
         </section>
 
-        <!-- CREATE -->
+
         <section id="create" class="content">
             <h2>Insert New Student</h2>
             <form method="post" action="">
@@ -76,7 +76,7 @@ if(isset($_POST['delete'])){
             ?>
         </section>
 
-        <!-- INFORMATION -->
+
         <section id="information" class="content">
             <h2>Student Information</h2>
             <?php
@@ -104,7 +104,7 @@ if(isset($_POST['delete'])){
             ?>
         </section>
 
-        <!-- UPDATE -->
+
         <section id="update" class="content">
             <h2>Update Student</h2>
             <form method="post" action="">
@@ -143,7 +143,7 @@ if(isset($_POST['delete'])){
             ?>
         </section>
 
-        <!-- DELETE -->
+
         <section id="delete" class="content">
             <h2>Delete Student</h2>
             <form method="post" action="">

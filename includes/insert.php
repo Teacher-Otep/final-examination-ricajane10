@@ -1,4 +1,4 @@
-<!-- CREATE -->
+
 <section id="create" class="content">
     <h2>Insert New Student</h2>
     <form method="post" action="">
